@@ -110,6 +110,27 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          name: "UNISOLDAS Soluções Industriais",
+          description: "Engenharia mecânica, soldagem especializada e manutenção industrial.",
+          telephone: "+55 41 98799-2619",
+          email: "comercial@unisoldasolucoes.com.br",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Rua Rodolpho Hatschbach, 1855",
+            addressLocality: "Curitiba",
+            addressRegion: "PR",
+            postalCode: "81460-030",
+            addressCountry: "BR",
+          },
+        }),
+      },
+    ],
   }),
   component: Home,
 });

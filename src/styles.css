@@ -196,7 +196,7 @@ img { display: block; max-width: 100%; }
   .desktop-nav { display: none; }
   .header-quote { margin-left: auto; }
   .menu-toggle { display: flex; }
-  .mobile-menu { display: flex; position: absolute; top: 100%; right: 24px; left: 24px; padding: 22px; flex-direction: column; gap: 0; background: oklch(0.1 0.008 250 / 98%); box-shadow: var(--shadow-industrial); visibility: hidden; opacity: 0; transform: translateY(-8px); transition: .3s; }
+  .mobile-menu { display: flex; position: absolute; top: 100%; right: 24px; left: 24px; padding: 22px; flex-direction: column; gap: 0; background: var(--graphite); box-shadow: var(--shadow-industrial); visibility: hidden; opacity: 0; transform: translateY(-8px); transition: .3s; }
   .mobile-menu.is-open { visibility: visible; opacity: 1; transform: none; }
   .mobile-menu > a:not(.quote-link) { padding: 16px 4px; border-bottom: 1px solid var(--line-dark); font: 700 12px var(--font-sans); text-transform: uppercase; }
   .mobile-menu .quote-link { margin-top: 20px; }
