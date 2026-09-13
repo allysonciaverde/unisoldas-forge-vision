@@ -29,6 +29,13 @@ const whatsappMessage =
   "Olá! Vi a UNISOLDAS pelo site e tenho interesse em realizar um orçamento. Gostaria de mais informações sobre as soluções e serviços.";
 const whatsappUrl = `https://wa.me/5541987992619?text=${encodeURIComponent(whatsappMessage)}`;
 
+const trustItems = [
+  { icon: Target, label: "Precisão" },
+  { icon: ShieldCheck, label: "Qualidade" },
+  { icon: Gauge, label: "Confiabilidade" },
+  { icon: Waypoints, label: "Atendimento" },
+];
+
 const services = [
   {
     title: "Solda TIG, MIG e alumínio",
@@ -201,14 +208,8 @@ function Home() {
             </div>
           </div>
           <div className="trust-strip">
-            {[
-              [Target, "Precisão"],
-              [ShieldCheck, "Qualidade"],
-              [Gauge, "Confiabilidade"],
-              [Waypoints, "Atendimento"],
-            ].map(([Icon, label]) => {
-              const ItemIcon = Icon;
-              return <div className="trust-item" key={label as string}><ItemIcon aria-hidden="true" /><span>{label as string}</span></div>;
+            {trustItems.map(({ icon: ItemIcon, label }) => {
+              return <div className="trust-item" key={label}><ItemIcon aria-hidden="true" /><span>{label}</span></div>;
             })}
           </div>
           <a className="scroll-mark" href="#empresa" aria-label="Ir para a próxima seção"><span /> Role para explorar</a>
